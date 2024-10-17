@@ -20,6 +20,17 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
+# Audio
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2048
+TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor \
@@ -36,6 +47,15 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhardware \
+    libhwbinder
+# Power Off Alarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
 
 # Overlays
 PRODUCT_PACKAGES += \
