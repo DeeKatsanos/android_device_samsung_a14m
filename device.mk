@@ -20,6 +20,12 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor \
+    $(DEVICE_PATH)/init/init.sec-charger.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.sec-charger.rc \
+    libsuspend
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
