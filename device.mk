@@ -32,6 +32,16 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # Overlays
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay_a14m \
+    FrameworksResOverlay_a14m \
+    SystemUIOverlay_a14m \
+    TelephonyOverlay_a14m\
+    WifiResOverlay_JDM_a14m
+
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
