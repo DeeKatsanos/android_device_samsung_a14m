@@ -23,8 +23,8 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Audio
-PRODUCT_PACKAGES += \
-    MtkInCallService
+# PRODUCT_PACKAGES += \
+#     MtkInCallService
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -65,8 +65,8 @@ PRODUCT_PACKAGES += \
     libhardware \
     libhwbinder
 # Power Off Alarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
+# PRODUCT_PACKAGES += \
+#     PowerOffAlarm
 
 # Overlays
 PRODUCT_PACKAGES += \
