@@ -7,7 +7,7 @@ system/etc/init/init.dt2w.rc
 system/bin/lpm
 system/etc/init/init.sec-charger.rc
 system/lib64/libmaet.so
-system/lib64/libshowlogo.so
+system_ext/lib64/libshowlogo.so
 system/lib64/libsxqk_skia.so
 system/media/battery_error.spi
 system/media/battery_lightning.spi
@@ -31,8 +31,8 @@ system/media/temperature_limit_usb.spi
 system/media/water_protection_usb.spi
 
 # Radio (IMS)
-system/framework/mediatek-common.jar
-system/framework/mediatek-framework.jar
-system/framework/mediatek-ims-base.jar
+system_ext/framework/mediatek-common.jar
+system_ext/framework/mediatek-framework.jar
+system_ext/framework/mediatek-ims-base.jar
 system_ext/lib/vendor.mediatek.hardware.mtkradioex@3.0.so
 system_ext/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
