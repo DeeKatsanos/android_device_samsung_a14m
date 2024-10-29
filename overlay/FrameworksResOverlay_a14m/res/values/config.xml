@@ -182,6 +182,8 @@
     <dimen name="status_bar_camera_top_margin">4.0px</dimen>
     <dimen name="status_bar_height_portrait">4.2199707mm</dimen>
     <dimen name="status_bar_indicator_corner_padding">45.0px</dimen>
+    <dimen name="rounded_corner_radius_bottom">38.0dip</dimen>
+    <dimen name="rounded_corner_radius_top">38.0dip</dimen>
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>

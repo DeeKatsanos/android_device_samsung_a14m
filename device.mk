@@ -22,10 +22,6 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
-# Audio
-# PRODUCT_PACKAGES += \
-#     MtkInCallService
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.sysbta.default \
@@ -64,21 +60,21 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhardware \
     libhwbinder
-# Power Off Alarm
-# PRODUCT_PACKAGES += \
-#     PowerOffAlarm
 
 #LPM
 PRODUCT_PACKAGES += \
     system_ext_31.0.cli
 
+# MTK
+PRODUCT_PACKAGES += \
+    MtkInCallService \
+    PowerOffAlarm \
+    BesLoudness
+
 # Overlays
 PRODUCT_PACKAGES += \
     SystemUIOverlay_A14m \
     FrameworksResOverlay_A14m \
-    CarrierConfigOverlay_A14m \
-    TelephonyOverlay_A14m \
-    WifiResOverlay_Overlay_A14m
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
