@@ -1,28 +1,9 @@
-# Policy Rules
-allow init lpm_exec:file { read getattr map execute open };
-allow init lpm:process transition;
-allow lpm lpm_exec:file { read getattr map execute open entrypoint };
-dontaudit init lpm:process noatsecure;
-allow init lpm:process { siginh rlimitinh };
-typetransition init lpm_exec:process lpm;
-
-allow lpm self:capability { net_admin sys_boot sys_tty_config };
-allow lpm self:process execmem;
-allow lpm self:netlink_kobject_uevent_socket { read create bind setopt };
-
-# EFS File Permissions
-allow lpm efs_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search };
-allow lpm efs_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
-
-# GPU Device Permissions
-allow lpm gpu_device:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search };
-allow lpm gpu_device:file { ioctl read write getattr lock append map open watch watch_reads };
-allow lpm gpu_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
-
-# Socket Permissions
-allow lpm property_socket:sock_file write;
-allow lpm init:unix_stream_socket connectto;
-
-# sec_charger_mode Property and File Permissions
-allow lpm sec_charger_mode_prop:property_service set;
-allow lpm sec_charger_mode_prop:file { read getattr map open };
+#lpm
+type lpm_exec, system_file_type, exec_type, file_type;
+type lpm, domain, coredomain;
+init_daemon_domain(lpm)
+allow lpm self:capability { sys_boot net_admin sys_boot sys_admin };
+allow lpm self:netlink_kobject_uevent_socket { create bind read setopt };
+allow lpm gpu_device:file create_file_perms;
+allow lpm gpu_device:dir rw_dir_perms;
+allow lpm gpu_device:chr_file rw_file_perms;
