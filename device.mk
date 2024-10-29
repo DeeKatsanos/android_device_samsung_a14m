@@ -75,10 +75,10 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     SystemUIOverlay_A14m \
-    FresOverlay_A14m \
-    CCOverlay_A14m \
-    TPOverlay_A14m \
-    WIFIRES_Overlay_A14m
+    FrameworksResOverlay_A14m \
+    CarrierConfigOverlay_A14m \
+    TelephonyOverlay_A14m \
+    WifiResOverlay_Overlay_A14m
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
