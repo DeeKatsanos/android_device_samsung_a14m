@@ -6,8 +6,6 @@
 
 DEVICE_PATH := device/samsung/a14m
 
--include vendor/lineage-priv/keys/keys.mk
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
@@ -149,3 +147,7 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a14m/a14m-vendor.mk)
+
+
+# Inherit the sign keys
+$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
