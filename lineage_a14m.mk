@@ -17,7 +17,7 @@ $(call inherit-product, device/samsung/a14m/device.mk)
 PRODUCT_DEVICE := a14m
 PRODUCT_NAME := lineage_a14m
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := Samsung Galaxy A14
+PRODUCT_MODEL := Galaxy A14
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
